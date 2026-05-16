@@ -41,14 +41,20 @@
     }
 
     .logo {
-      font-size: 3rem;
-      font-weight: 700;
       margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+      white-space: pre;
+      user-select: all;
+      font-size: 1.15rem;
+      line-height: 1.25;
+    }
+
+    .logo-line {
+      display: block;
       background: linear-gradient(135deg, var(--blue), var(--magenta), var(--cyan));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      letter-spacing: -0.02em;
     }
 
     .tagline {
@@ -188,7 +194,7 @@
     }
 
     @media (max-width: 480px) {
-      .logo { font-size: 2.2rem; }
+      .logo { font-size: 0.75rem; line-height: 1.2; }
       .features { grid-template-columns: 1fr; gap: 1.5rem; }
       .code { font-size: 0.9rem; padding: 0.85rem 1rem; }
     }
@@ -196,7 +202,14 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">vibespace</div>
+    <div class="logo">
+      <span class="logo-line">██╗   ██╗ ██╗ ██████╗  ███████╗ ███████╗ ██████╗   █████╗   ██████╗ ███████╗</span>
+      <span class="logo-line">██║   ██║ ██║ ██╔══██╗ ██╔════╝ ██╔════╝ ██╔══██╗ ██╔══██╗ ██╔════╝ ██╔════╝</span>
+      <span class="logo-line">██║   ██║ ██║ ██████╔╝ █████╗   ███████╗ ██████╔╝ ███████║ ██║      █████╗</span>
+      <span class="logo-line">╚██╗ ██╔╝ ██║ ██╔══██╗ ██╔══╝   ╚════██║ ██╔═══╝  ██╔══██║ ██║      ██╔══╝</span>
+      <span class="logo-line"> ╚████╔╝  ██║ ██████╔╝ ███████╗ ███████║ ██║      ██║  ██║ ╚██████╗ ███████╗</span>
+      <span class="logo-line">  ╚═══╝   ╚═╝ ╚═════╝  ╚══════╝ ╚══════╝ ╚═╝      ╚═╝  ╚═════╝ ╚══════╝</span>
+    </div>
     <div class="tagline">your dev hangout — chat, code, vibes</div>
 
     <div class="card">
