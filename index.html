@@ -119,7 +119,7 @@
 
     .features {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-bottom: 2.5rem;
     }
@@ -191,7 +191,7 @@
 
     @media (max-width: 480px) {
       .logo { font-size: 1.5rem; }
-      .features { grid-template-columns: 1fr; gap: 1.5rem; }
+      .features { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
       .code { font-size: 0.55rem; padding: 0.85rem 1rem; }
     }
   </style>
@@ -225,6 +225,11 @@
         <div class="feature-icon">🎵</div>
         <div class="feature-name">Lofi Radio</div>
         <div class="feature-desc">ambient beats to code to</div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🚀</div>
+        <div class="feature-name">Share Your Project</div>
+        <div class="feature-desc">showcase what you built</div>
       </div>
     </div>
 
