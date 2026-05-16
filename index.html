@@ -135,30 +135,43 @@
     }
 
     .features {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
+      list-style: none;
       margin-bottom: 2.5rem;
+      text-align: left;
     }
 
-    .feature {
-      text-align: center;
-    }
-
-    .feature-icon {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .feature-name {
-      font-size: 0.5rem;
+    .features li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.7rem;
       color: var(--fg);
-      margin-bottom: 0.25rem;
+      transition: background 0.2s;
     }
 
-    .feature-desc {
-      font-size: 0.4rem;
+    .features li:last-child {
+      border-bottom: none;
+    }
+
+    .features li:hover {
+      background: rgba(122, 162, 247, 0.05);
+    }
+
+    .features li .icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .features li .label {
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    .features li .desc {
       color: var(--fg-dim);
+      font-size: 0.6rem;
     }
 
     .status {
@@ -228,28 +241,28 @@
       <div class="copy-hint">click to copy</div>
     </div>
 
-    <div class="features">
-      <div class="feature">
-        <div class="feature-icon">💬</div>
-        <div class="feature-name">Chat</div>
-        <div class="feature-desc">real-time terminal room</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-name">Leaderboard</div>
-        <div class="feature-desc">token spend rankings</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🎵</div>
-        <div class="feature-name">Lofi Radio</div>
-        <div class="feature-desc">ambient beats to code to</div>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🚀</div>
-        <div class="feature-name">Share Your Project</div>
-        <div class="feature-desc">showcase what you built</div>
-      </div>
-    </div>
+    <ul class="features">
+      <li>
+        <span class="icon">💬</span>
+        <span class="label">Chat</span>
+        <span class="desc">— real-time terminal room</span>
+      </li>
+      <li>
+        <span class="icon">🏆</span>
+        <span class="label">Leaderboard</span>
+        <span class="desc">— token spend rankings</span>
+      </li>
+      <li>
+        <span class="icon">🎵</span>
+        <span class="label">Lofi Radio</span>
+        <span class="desc">— ambient beats to code to</span>
+      </li>
+      <li>
+        <span class="icon">🚀</span>
+        <span class="label">Share Your Project</span>
+        <span class="desc">— showcase what you built</span>
+      </li>
+    </ul>
 
     <div class="status">
       <div class="status-dot"></div>
